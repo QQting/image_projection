@@ -261,3 +261,14 @@ Generates an ideal ("tru-theta") fisheye image by creating a 3D sphere. An ideal
 [tf2_msgs/TFMessage]:https://docs.ros.org/en/melodic/api/tf2_msgs/html/msg/TFMessage.html
 [camera_calibration]:http://wiki.ros.org/camera_calibration
 [kalibr]:https://github.com/ethz-asl/kalibr
+
+
+## Troubleshooting
+
+If the NVIDIA jetson compiler could not recognize the OpenCV API, please make sure the opencv library is linked correctly.
+One example is to add below codes into `kalibr_image_geometry/kalibr_extended_camera_info_publisher/CMakeLists.txt`:
+
+```
+find_package(OpenCV REQUIRED)
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${OpenCV_LIBS})
+```

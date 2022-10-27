@@ -3,15 +3,15 @@ $(arg camera_name)_pinhole_front:
   update_rate: 10
   always_recompute_mapping: false
   base_frame: $(arg camera_name)_center_link
-  pose: [0, 0, 0, 0, 0.4, 0]
+  pose: [0, 0, 0, 0, 0, 0]
   virtual_sensor_frame: pinhole_front_camera_frame
   virtual_sensor_optical_frame: pinhole_front_optical_frame
   projection_type: image_projection_plugins::PinholeProjection
   projection_parameters:
-    image_width: 1024
-    image_height: 512
+    image_width: 1280
+    image_height: 720
     horizontal_fov: 130
-    focal_length: 1
+    focal_length: 5
 
 # Mercator projection
 $(arg camera_name)_mercator_projection:

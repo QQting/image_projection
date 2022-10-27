@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch> 
+  <!-- Start image projections -->
+  <include file="$(find image_projection_demo)/launch/gmsl_projections.launch"/>
+  
+  <!-- Show in rqt -->
+  <include file="$(find image_projection_demo)/launch/rqt.launch"/>
+</launch>

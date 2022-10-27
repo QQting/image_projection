@@ -1,0 +1,14 @@
+# Used cameras for the projection
+cameras:
+  - '/center_camera'
+  - '/left_camera'
+
+# Topic setup
+center_camera:
+  image_topic: image_rect_color123
+  camera_info_topic: camera_info111
+  extended_camera_info_topic: extended_camera_info
+left_camera:
+  image_topic: image_rect_color456
+  camera_info_topic: camera_info222
+  extended_camera_info_topic: extended_camera_info
